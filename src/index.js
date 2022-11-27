@@ -6,15 +6,10 @@ import { HoroscopeContext } from './context/HoroscopeContext';
 
 const Root = () => {
   return (
-    <HoroscopeContext>
+    <HoroscopeContext.Provider value={{ sign: 'Pisces' }}>
       <App />
-    </HoroscopeContext>
+    </HoroscopeContext.Provider>
   );
 };
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<Root />, document.getElementById('root'));
